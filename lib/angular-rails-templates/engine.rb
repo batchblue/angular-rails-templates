@@ -1,11 +1,12 @@
 module AngularRailsTemplates
   class Engine < ::Rails::Engine
     config.angular_templates = ActiveSupport::OrderedOptions.new
-    config.angular_templates.module_name    = 'templates'
-    config.angular_templates.ignore_prefix  = ['templates/']
-    config.angular_templates.inside_paths   = ['app/assets']
-    config.angular_templates.markups        = []
-    config.angular_templates.extension      = 'html'
+    config.angular_templates.module_name      = 'templates'
+    config.angular_templates.ignore_prefix    = ['templates/']
+    config.angular_templates.ignore_extension = 'html'
+    config.angular_templates.inside_paths     = ['app/assets']
+    config.angular_templates.markups          = []
+    config.angular_templates.extension        = 'html'
 
     config.before_configuration do |app|
       # try loading common markups
