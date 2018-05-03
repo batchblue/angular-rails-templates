@@ -31,7 +31,7 @@ module AngularRailsTemplates
 
     def template_name(name)
       path = name.sub(/^#{config.ignore_prefix.join('|')}/, '')
-      if config.itnore_extension.present?
+      if config.ignore_extension.present?
         path = "#{path}.#{config.ignore_extension}"
       end
       path
